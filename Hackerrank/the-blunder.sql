@@ -1,4 +1,9 @@
--- https://www.hackerrank.com/challenges/the-blunder/problem?isFullScreen=true
+-- https://www.hackerrank.com/challenges/earnings-of-employees/problem?isFullScreen=true
 
-SELECT CEIL(AVG(SALARY) - AVG(REPLACE(SALARY, 0, '')))
-FROM EMPLOYEES;
+SELECT
+    MAX(MONTHS*SALARY) AS MAXIMUM_EARNINGS,
+    COUNT(*) AS NUMBER_OF_EMPLOYEES
+FROM
+    EMPLOYEE
+WHERE
+    (MONTHS*SALARY) = (SELECT MAX(MONTHS*SALARY) FROM EMPLOYEE); 
