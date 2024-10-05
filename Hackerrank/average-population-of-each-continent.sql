@@ -1,8 +1,4 @@
-    -- https://www.hackerrank.com/challenges/average-population-of-each-continent/problem?isFullScreen=true
-    
-    SELECT 
-        COUNTRY.Continent, FLOOR(AVG(CITY.Population))
-    FROM
-        CITY JOIN COUNTRY ON CITY.CountryCode = COUNTRY.Code
-    GROUP BY
-        COUNTRY.Continent;
+-- https://www.hackerrank.com/challenges/revising-the-select-query/submissions/code/403290062
+SELECT * FROM CITY
+WHERE COUNTRYCODE = 'USA' 
+AND POPULATION > 100000;
